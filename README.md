@@ -1,6 +1,6 @@
 # Campus-network
 
-EIGRP:
+# EIGRP:
 
     • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope in the network.
 
@@ -16,7 +16,7 @@ EIGRP:
 
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
-OSPF:
+# OSPF:
 
     • Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
 
@@ -32,21 +32,21 @@ OSPF:
 
 
 
-#Security:
+# Security:
 
-•	EIGRP: Configured with MD5 authentication.
+    • EIGRP: Configured with MD5 authentication.
 
-•	OSPF: Configured with MD5 authentication.
+    • OSPF: Configured with MD5 authentication.
 
-•	Firewalls: Act as zone-based firewalls, with specific rules for traffic.
+    • Firewalls: Act as zone-based firewalls, with specific rules for traffic.
 
-•	CoPP: Configured on Backbone routers.
+    • CoPP: Configured on Backbone routers.
 
-•	Edge routers: Disable CDP and LLDP on internet-facing interfaces.
+    • Edge routers: Disable CDP and LLDP on internet-facing interfaces.
 
-•	IPsec: Configured in conjunction with DMVPN for enhanced security.
+    • IPsec: Configured in conjunction with DMVPN for enhanced security.
 
-•	Remote access devices can only be accessed via 192.168.2.0/24 network.
+    • Remote access devices can only be accessed via 192.168.2.0/24 network.
 
 
 #IP Services:
