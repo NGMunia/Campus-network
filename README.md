@@ -15,8 +15,6 @@ EIGRP:
     • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation with a uniform delay setting of 10 microseconds.
 
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
-
-
 OSPF:
 
     • Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
