@@ -18,7 +18,6 @@
     • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks.
 
 
-
 # Security:
 
     • EIGRP: Configured with MD5 authentication.
