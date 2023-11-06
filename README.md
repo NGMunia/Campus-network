@@ -21,19 +21,12 @@
 # Security:
 
     • EIGRP: Configured with MD5 authentication.
-
     • OSPF: Configured with MD5 authentication.
-
     • Firewalls: Act as zone-based firewalls, with specific rules for traffic.
-
     • CoPP: Configured on Backbone routers.
-
     • Edge routers: Disable CDP and LLDP on internet-facing interfaces.
-
     • IPsec: Configured in conjunction with DMVPN for enhanced security.
-
     • Remote access devices can only be accessed via 192.168.2.0/24 network.
-
 
 #IP Services:
 
