@@ -17,19 +17,19 @@
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
 
-#OSPF:
+# OSPF:
 
-•	Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
+    • Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
 
-•	Area 10: Configured as an NSSA, receiving type 3 IA LSAs and Type 7 LSAs for the default route.
+    • Area 10: Configured as an NSSA, receiving type 3 IA LSAs and Type 7 LSAs for the default route.
 
-•	Area 51 and Backbone: Configured as normal areas.
+    • Area 51 and Backbone: Configured as normal areas.
 
-•	ASBR (R6): Redistributes EIGRP prefixes into OSPF and redistributes OSPF routes into EIGRP-20.
+    • ASBR (R6): Redistributes EIGRP prefixes into OSPF and redistributes OSPF routes into EIGRP-20.
 
-•	Area 0: Serves as the backbone with R1 as the DR and R2 as the BDR, featuring point-to-point links.
+    • Area 0: Serves as the backbone with R1 as the DR and R2 as the BDR, featuring point-to-point links.
 
-•	HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks.
+    • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks.
 
 
 
