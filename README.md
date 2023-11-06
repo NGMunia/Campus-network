@@ -1,6 +1,6 @@
 # Campus-network
 
-EIGRP Optimization:
+EIGRP:
 
 •	Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope in the network.
 
@@ -17,7 +17,8 @@ EIGRP Optimization:
 •	Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
 
-OSPF Optimization:
+OSPF:
+
 
 •	Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
 
