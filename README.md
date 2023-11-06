@@ -1,6 +1,6 @@
 # Campus-network
 
-EIGRP:
+#EIGRP:
 
 •	Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope in the network.
 
@@ -17,8 +17,7 @@ EIGRP:
 •	Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
 
-OSPF:
-
+#OSPF:
 
 •	Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
 
@@ -34,7 +33,7 @@ OSPF:
 
 
 
-Security:
+#Security:
 
 •	EIGRP: Configured with MD5 authentication.
 
@@ -51,7 +50,7 @@ Security:
 •	Remote access devices can only be accessed via 192.168.2.0/24 network.
 
 
-IP Services:
+#IP Services:
 
 •	DHCP Server: 'windows-server' serves as the DHCP server for area 23 and spoke networks.
 
@@ -66,7 +65,7 @@ IP Services:
 •	In Area 23 HSRPv2 is configured for redundancy and load sharing of traffic for both VLAN 2 and 3
 
 
-Network Assurance:
+#Network Assurance:
 
 •	SNMP: Configured on all routers for proactive monitoring using PRTG installed on 'windows server.'
 
