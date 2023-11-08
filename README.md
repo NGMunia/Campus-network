@@ -33,19 +33,20 @@ Security:
 
 IP Services:
 
-•	DHCP Server: 'windows-server' serves as the DHCP server for area 23 and spoke networks.
-•	QoS: Configured on end devices to block torrent sites and police social media sites to 1Mbps.
-•	NAT: Configured on spoke routers to provide independent internet connectivity for regional offices.
-•	NTP: Configured on all devices for time synchronization.
-•	For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu (‘Automate’) server.
-•	In Area 23 HSRPv2 is configured for redundancy and load sharing of traffic for both VLAN 2 and 3
+    • DHCP Server: 'windows-server' serves as the DHCP server for area 23 and spoke networks.
+    • QoS: Configured on end devices to block torrent sites and police social media sites to 1Mbps.
+    • NAT: Configured on spoke routers to provide independent internet connectivity for regional offices.
+    • NTP: Configured on all devices for time synchronization.
+    • For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu (‘Automate’) server.
+    • In Area 23 HSRPv2 is configured for redundancy and load sharing of traffic for both VLAN 2 and 3
 
 Network Assurance:
 
-•	SNMP: Configured on all routers for proactive monitoring using PRTG installed on 'windows server.'
-•	NetFlow: Configured on all Spokes and Area 23 routers to monitor traffic trends.
-•	Syslog has been configured on all devices with windows server as the syslog server
-o	VTY access has been configured with syslog level 6
+    • SNMP: Configured on all routers for proactive monitoring using PRTG installed on 'windows server.'
+    • NetFlow: Configured on all Spokes and Area 23 routers to monitor traffic trends.
+    • Syslog has been configured on all devices with windows server as the syslog server
+        o VTY access has been configured with syslog level 6
 
 Network Automation:
-•	Python Netmiko: Installed on 'Automate' server to automate repetitive tasks related to SNMP, NetFlow, and DHCP.
+
+    • Python Netmiko: Installed on 'Automate' server to automate repetitive tasks related to SNMP, NetFlow, and DHCP.
