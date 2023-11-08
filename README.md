@@ -21,23 +21,24 @@ OSPF:
     • Area 51 and Backbone: Configured as normal areas.
     • ASBR (R6): Redistributes EIGRP prefixes into OSPF and redistributes OSPF routes into EIGRP-20.
     • Area 0: Serves as the backbone with R1 as the DR and R2 as the BDR, featuring point-to-point links.
-    • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks.
+    • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks; they also
+      Redistribute prefixes between OSPF and EIGRP domains.
 
 
 Security:
 
     • EIGRP: Configured with MD5 authentication.
-    • OSPF: Configured with MD5 authentication.
+    • OSPF: Configured with MD5 authentication.*
     • Firewalls: Act as zone-based firewalls, with specific rules for traffic.
     • CoPP: Configured on Backbone routers.
     • Edge routers: Disable CDP and LLDP on internet-facing interfaces.
     • IPsec: Configured in conjunction with DMVPN for enhanced security.
-    • Remote access devices can only be accessed via 192.168.2.0/24 network.
+    • Remote access via SSH can only be accessed via 192.168.2.0/24 network.
 
 
 IP Services:
 
-    • DHCP Server: 'windows-server' serves as the DHCP server for area 23 and spoke networks.
+    • DHCP Server: windows-server serves as the DHCP/DNS server.
     • QoS: Configured on end devices to block torrent sites and police social media sites to 1Mbps.
     • NAT: Configured on spoke routers to provide independent internet connectivity for regional offices.
     • NTP: Configured on all devices for time synchronization.
@@ -53,4 +54,4 @@ Network Assurance:
 
 Network Automation:
 
-    • Python Netmiko: Installed on 'Automate' server to automate repetitive tasks related to SNMP, NetFlow, and DHCP.
+    • Python Netmiko: Installed on Ubuntu server to automate repetitive tasks related to SNMP, NetFlow and DHCP.
