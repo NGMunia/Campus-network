@@ -11,6 +11,7 @@ EIGRP:
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
 OSPF:
+
     • Area 10: Configured as a totally stub area, propagating only a default type 3 LSA.
     • Area 10: Configured as an NSSA, receiving type 3 IA LSAs and Type 7 LSAs for the default route.
     • Area 51 and Backbone: Configured as normal areas.
@@ -21,13 +22,13 @@ OSPF:
 
 Security:
 
-•	EIGRP: Configured with MD5 authentication.
-•	OSPF: Configured with MD5 authentication.
-•	Firewalls: Act as zone-based firewalls, with specific rules for traffic.
-•	CoPP: Configured on Backbone routers.
-•	Edge routers: Disable CDP and LLDP on internet-facing interfaces.
-•	IPsec: Configured in conjunction with DMVPN for enhanced security.
-•	Remote access devices can only be accessed via 192.168.2.0/24 network.
+    • EIGRP: Configured with MD5 authentication.
+    • OSPF: Configured with MD5 authentication.
+    • Firewalls: Act as zone-based firewalls, with specific rules for traffic.
+    • CoPP: Configured on Backbone routers.
+    • Edge routers: Disable CDP and LLDP on internet-facing interfaces.
+    • IPsec: Configured in conjunction with DMVPN for enhanced security.
+    • Remote access devices can only be accessed via 192.168.2.0/24 network.
 
 
 IP Services:
