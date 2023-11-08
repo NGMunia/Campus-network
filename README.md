@@ -42,7 +42,7 @@ IP Services:
     • QoS: Configured on end devices to block torrent sites and police social media sites to 1Mbps.
     • NAT: Configured on spoke routers to provide independent internet connectivity for regional offices.
     • NTP: Configured on all devices for time synchronization.
-    • For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu (‘Automate’) server.
+    • For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu server.
     • In Area 23 HSRPv2 is configured for redundancy and load sharing of traffic for both VLAN 2 and 3
 
 Network Assurance:
