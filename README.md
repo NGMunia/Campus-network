@@ -58,3 +58,5 @@ Network Automation:
 
     • Python Netmiko: Installed on Ubuntu server to automate repetitive tasks related to 
       SNMP, NetFlow and DHCP.
+    • EEM applets have been configured to automate back-up of running configurations.
+      
