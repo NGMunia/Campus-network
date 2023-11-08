@@ -2,14 +2,14 @@
 
 EIGRP:
 
-    • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope 
-      in the network.
+    • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting 
+      the query scope in the network.
     • Route Filtering: Implemented to allow communication within regions and with HQ while restricting inter-regional 
       router communication.
     • EIGRP Bandwidth Allocation: EIGRP is allocated 25% of the bandwidth on links participating in the EIGRP process.
     • EIGRP Authentication: Authentication is enabled for EIGRP neighborship to enhance security.
-    • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation with a uniform 
-      delay setting of 10 microseconds.
+    • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation 
+      with a uniform delay setting of 10 microseconds.
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
     • EIGRP add-path feature is used to advertise redundant links to spoke routers.
 
@@ -20,8 +20,8 @@ OSPF:
     • Area 51 and Backbone: Configured as normal areas.
     • ASBR (R6): Redistributes EIGRP prefixes into OSPF and redistributes OSPF routes into EIGRP-20.
     • Area 0: Serves as the backbone with R1 as the DR and R2 as the BDR, featuring point-to-point links.
-    • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks; they also
-      Redistribute prefixes between OSPF and EIGRP domains.
+    • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks; 
+      they also Redistribute prefixes between OSPF and EIGRP domains.
     • Reference bandwidth for all routers used in OSPF cost calculation is 100Gbps
 
 
