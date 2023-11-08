@@ -54,4 +54,5 @@ Network Assurance:
 
 Network Automation:
 
-    • Python Netmiko: Installed on Ubuntu server to automate repetitive tasks related to SNMP, NetFlow and DHCP.
+    • Python Netmiko: Installed on Ubuntu server to automate repetitive tasks related to 
+      SNMP, NetFlow and DHCP.
