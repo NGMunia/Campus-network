@@ -13,6 +13,7 @@ EIGRP:
     • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation with a uniform 
       delay setting of 10 microseconds.
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
+    • EIGRP add-path feature is used to advertise redundant links to spoke routers.
 
 OSPF:
 
