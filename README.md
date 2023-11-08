@@ -23,7 +23,7 @@ OSPF:
     • Area 0: Serves as the backbone with R1 as the DR and R2 as the BDR, featuring point-to-point links.
     • HUBs 1 and 2: Serve as the internet and VPN gateways for OSPF and EIGRP domains in the spoke networks; they also
       Redistribute prefixes between OSPF and EIGRP domains.
-    • Reference bandwidth for all router used in OSPF cost calculation is 100Gbps
+    • Reference bandwidth for all routers used in OSPF cost calculation is 100Gbps
 
 
 Security:
