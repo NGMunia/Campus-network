@@ -2,12 +2,16 @@
 
 EIGRP:
 
-    • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope in the network.
-    • Route Filtering: Implemented to allow communication within regions and with HQ while restricting inter-regional router communication.
+    • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting the query scope 
+      in the network.
+    • Route Filtering: Implemented to allow communication within regions and with HQ while restricting inter-regional 
+      router communication.
     • EIGRP Bandwidth Allocation: EIGRP is allocated 25% of the bandwidth on links participating in the EIGRP process.
     • EIGRP Authentication: Authentication is enabled for EIGRP neighborship to enhance security.
-    • Route Summarization: Hub routers summarize LAN networks towards spokes and vice versa, reducing routing table size and improving efficiency.
-    • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation with a uniform delay setting of 10 microseconds.
+    • Route Summarization: Hub routers summarize LAN networks towards spokes and vice versa, reducing routing table size 
+      and improving efficiency.
+    • EIGRP Metric Calculation: Configured to use only the delay metric value for path metric calculation with a uniform 
+      delay setting of 10 microseconds.
     • Passive Interfaces: LAN-facing interfaces are configured as passive to reduce unnecessary EIGRP traffic.
 
 OSPF:
