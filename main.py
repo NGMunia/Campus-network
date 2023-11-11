@@ -118,7 +118,7 @@ for devices in chain(Firewalls_A_51.values()):
 
 
 #Configuring MOTD login banner
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
+for devices in chain(Firewall_A_10.values(),Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values(),Spokes.values()):
     c = ConnectHandler(**devices)
     c.enable()
     host = c.send_command('show version',use_textfsm=True)[0]['hostname']
@@ -136,7 +136,7 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
 
 
 
-#Configuring MOTD login banner
+#Configuring NAT
 for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
     c = ConnectHandler(**devices)
     c.enable()
