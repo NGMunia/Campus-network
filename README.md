@@ -49,7 +49,9 @@ IP Services:
 
 Network Assurance:
 
-    • SNMP: Configured on all routers for proactive monitoring using PRTG installed on 'windows server.'
+    • SNMP: Configured on all routers for proactive monitoring using PRTG installed on windows server.
+    • SPAN and RSPAN: Configured on Edge switches to inspect all traffic entering from and leaving towards
+      the internet.
     • NetFlow: Configured on all Spokes and Area 23 routers to monitor traffic trends.
     • Syslog has been configured on all devices with windows server as the syslog server
         o VTY access has been configured with syslog level 6
