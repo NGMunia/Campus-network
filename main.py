@@ -124,11 +124,11 @@ for devices in chain(Firewall_A_10.values(),Firewalls_A_51.values(), Area_0.valu
     host = c.send_command('show version',use_textfsm=True)[0]['hostname']
     commands = [
                 'banner login @',
-               f'{"*"*50}\n',
-               f'{" "*10}{host}-ROUTER\n',
-               f'{" "*5}Configured using CLI and Netmiko\n',
-               f'{" "}Unauthorized access is strictly forbidden\n',
-               f'{"*"*50}\n',
+               f'{"*"*50}',
+               f'{" "*10}{host}-ROUTER',
+               f'{" "*5}Configured using CLI and Netmiko',
+               f'{" "}Unauthorized access is strictly forbidden',
+               f'{"*"*50}',
                '@']
     rp(c.send_config_set(commands),'\n')
     c.save_config()
