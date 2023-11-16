@@ -45,14 +45,14 @@ Spokes  =   {
                       'password': 'cisco123',
                       'ip':'10.1.61.1'
                     },
-              # 'KSM':{
-              #         'device_type':'cisco_ios',
-              #         'username': 'Automation',
-              #         'secret': 'cisco123',
-              #         'password': 'cisco123',
-              #         'ip':'10.1.51.6'
-          #           # }
-          'KSM-LAN':{
+              'KSM':{
+                      'device_type':'cisco_ios',
+                      'username': 'Automation',
+                      'secret': 'cisco123',
+                      'password': 'cisco123',
+                      'ip':'172.16.0.7'
+                     },
+           'KSM-LAN':{
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
@@ -134,6 +134,7 @@ Area_23 = {
                       'ip':'192.168.2.2'
                     }
          }
+
 Firewalls_A_51 =    {
           'FW-1': {
                       'device_type':'cisco_ios',

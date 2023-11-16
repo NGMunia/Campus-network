@@ -180,3 +180,20 @@ for devices in chain(Firewalls_A_51.values(),Spokes.values()):
         f.write(output)
         c.disconnect()
     rp(f'{host}{" "}Routes have been documented!!')
+
+
+#Configuring Syslog:
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values(),Spokes.values()):
+    c = ConnectHandler(**devices)
+    c.enable()
+    commands = ['logging monitor informational',
+                'logging host 192.168.10.254']
+    rp(c.send_config_set(commands),'\n')
+    c.save_config()
+    c.disconnect()
+    
+    
+    
+
+
+
