@@ -11,8 +11,8 @@ Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
 Gateway of last resort is not set
 
       172.16.0.0/24 is subnetted, 1 subnets
-D        172.16.0.0 [90/517120] via 10.1.1.1, 01:14:51, Ethernet0/1
+D        172.16.0.0 [90/517120] via 10.1.1.1, 02:40:25, Ethernet0/1
       172.17.0.0/24 is subnetted, 1 subnets
-D        172.17.0.0 [90/517120] via 10.1.1.1, 01:14:51, Ethernet0/1
-D EX  192.168.2.0/23 [170/522240] via 10.1.1.1, 01:14:48, Ethernet0/1
-D EX  192.168.10.0/23 [170/522240] via 10.1.1.1, 01:14:48, Ethernet0/1
+D        172.17.0.0 [90/517120] via 10.1.1.1, 02:40:25, Ethernet0/1
+D EX  192.168.2.0/23 [170/522240] via 10.1.1.1, 02:40:11, Ethernet0/1
+D EX  192.168.10.0/23 [170/522240] via 10.1.1.1, 02:40:11, Ethernet0/1
