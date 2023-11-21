@@ -16,7 +16,8 @@ for devices in Spokes.values():
 
 
 # #Configuring SNMP on all devices
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                     Area_10.values(),Area_23.values()):
     c = ConnectHandler(**devices)
     c.enable()
     commands = ['ip access-list standard SNMP-ACL',
@@ -52,7 +53,8 @@ for devices in chain(Spokes.values(), Area_23.values()):
     
 
 # #Configuring Access-class restricting remote connection to 192.168.2.0/24
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),
+                     Area_23.values()):
     c = ConnectHandler(**devices)
     c.enable()
 
@@ -71,7 +73,8 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
 
 #Getting Running configurations:
 filepath = input('Input backup filepath: ')
-for devices in chain(Spokes.values(),Firewall_A_10.values(),Area_0.values(),Area_10.values(),Area_23.values(),Firewalls_A_51.values()):
+for devices in chain(Spokes.values(),Firewall_A_10.values(),Area_0.values(),Area_10.values(),Area_23.values(),
+                     Firewalls_A_51.values()):
     c = ConnectHandler(**devices)
     c.enable()
     host = c.send_command('show version',use_textfsm=True)[0]['hostname']
@@ -119,7 +122,8 @@ for devices in chain(Firewalls_A_51.values()):
 
 
 #Configuring MOTD login banner
-for devices in chain(Firewall_A_10.values(),Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values(),Spokes.values()):
+for devices in chain(Firewall_A_10.values(),Firewalls_A_51.values(), Area_0.values(),Area_10.values(),
+                     Area_23.values(),Spokes.values()):
     c = ConnectHandler(**devices)
     c.enable()
     host = c.send_command('show version',use_textfsm=True)[0]['hostname']
@@ -137,7 +141,8 @@ for devices in chain(Firewall_A_10.values(),Firewalls_A_51.values(), Area_0.valu
 
 
 #Configuring NAT
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                     Area_10.values(),Area_23.values()):
     c = ConnectHandler(**devices)
     c.enable()
     commands = ['ip access-list standard Nat_acl',
@@ -156,7 +161,8 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
 
 #Verifying OSPF routes:
 filepath = input('Input OSPF backup filepath: ')
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values()):
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                     Area_10.values(),Area_23.values()):
     c = ConnectHandler(**devices)
     c.enable()
     host = c.send_command('show version',use_textfsm=True)[0]['hostname']
@@ -165,7 +171,6 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
         f.write(output)
         c.disconnect()
     rp(f'{host}{" "}Routes have been documented!!')
-print('\n')
 
 
 
@@ -183,7 +188,8 @@ for devices in chain(Firewalls_A_51.values(),Spokes.values()):
 
 
 #Configuring Syslog:
-for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),Area_23.values(),Spokes.values()):
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                     Area_10.values(),Area_23.values(),Spokes.values()):
     c = ConnectHandler(**devices)
     c.enable()
     commands = ['logging monitor informational',
@@ -193,7 +199,22 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
     c.disconnect()
     
     
-    
+
+#Running configuration backup
+Backup_path = input('Backup path: ')
+for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                     Area_10.values(),Area_23.values(),Spokes.values()):
+    c = ConnectHandler(**devices)
+    c.enable()
+    host =  c.send_command('show version',use_textfsm=True)[0]['hostname']
+    output = c.send_command('show running-config')
+    with open (f'{Backup_path}/{host}','w') as f:
+        f.write(output)
+        c.disconnect()
+    rp(f'{host}{" "}Running configuration backed up successfully!!')
+
+
+
 
 
 
