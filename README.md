@@ -2,7 +2,7 @@
 
 EIGRP:
 
-    • Stub Router Configuration: R1-LAN and all spoke routers are configured as stub routers, limiting 
+    • Stub Router Configuration: All spoke routers are configured as stub routers, limiting 
       the query scope in the network.
     • Route Filtering: Implemented to allow communication within regions and with HQ while restricting 
       inter-regional router communication.
