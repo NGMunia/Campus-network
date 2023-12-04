@@ -41,7 +41,7 @@ Security:
 IP Services:
 
     • DHCP Server: windows-server serves as the DHCP/DNS server.
-    • QoS: Configured on end devices to block torrent sites and police social media sites to 1Mbps.
+    • QoS: Configured on routers facing end devices to block torrent sites and police social media sites to 1Mbps.
     • NAT: Configured on spoke routers to provide independent internet connectivity for regional offices.
     • NTP: Configured on all devices for time synchronization.
     • For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu server.
