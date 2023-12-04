@@ -44,8 +44,7 @@ IP Services:
     • QoS: Configured on routers facing end devices to block torrent sites and police social media sites to 1Mbps.
     • NAT: Configured on spoke routers and Area 51 firewalls to provide independent internet connectivity for regional offices.
     • NTP: Configured on all devices for time synchronization.
-    • For Ubuntu remote connection I’ve used xRDP to remotely access ubuntu server, windows server is also configured to enable
-      Remote desktop connection.
+    • windows server is configured to enable Remote desktop connection, the firewall only permits this from 192.168.2.0/24 network.
     • In Area 23 HSRPv2 is configured for redundancy and load sharing of traffic for both VLAN 2 and 3
 
 Network Assurance:
