@@ -14,7 +14,7 @@ Spokes  =   {
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.54.1',
+                      'ip':'10.1.50.1',
                       'timeout': 15
                     },
             'NBI-2':{
@@ -22,7 +22,7 @@ Spokes  =   {
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.54.2'
+                      'ip':'10.1.50.2'
                     },
               'NKR':{
                       'device_type':'cisco_ios',
@@ -67,28 +67,28 @@ Area_0 =  {
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.0.1'
+                      'ip':'1.0.0.0'
                     },
           'R2-A-0': {
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.0.2'
+                      'ip':'2.0.0.0'
                     },  
           'R3-A-0': {
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.0.3'
+                      'ip':'3.0.0.0'
                     }, 
           'R4-A-0': {
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.0.4'
+                      'ip':'4.0.0.0'
                     }
           }
 
@@ -98,24 +98,29 @@ Area_10 = {
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.10.2',
-                      'ip':'10.1.10.6'
+                      'ip':'10.0.10.9',
                     },
           'R6-A-10':{
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'10.1.10.10'
+                      'ip':'10.0.10.13'
                     },  
           'R7-A-10':{
                       'device_type':'cisco_ios',
                       'username': 'Automation',
                       'secret': 'cisco123',
                       'password': 'cisco123',
-                      'ip':'172.20.20.1',
-                      'ip':'172.20.21.1'
-                    }
+                      'ip':'10.1.10.18'
+                    },
+          'R8-A-10':{
+                      'device_type':'cisco_ios',
+                      'username': 'Automation',
+                      'secret': 'cisco123',
+                      'password': 'cisco123',
+                      'ip':'172.20.20.1'
+                    }   
           }
 
 Area_23 = {

@@ -6,13 +6,13 @@ Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
        ia - IS-IS inter area, * - candidate default, U - per-user static route
        o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
        a - application route
-       + - replicated route, % - next hop override
+       + - replicated route, % - next hop override, p - overrides from PfR
 
-Gateway of last resort is 64.65.66.1 to network 0.0.0.0
+Gateway of last resort is 41.41.41.1 to network 0.0.0.0
 
       10.0.0.0/8 is variably subnetted, 3 subnets, 3 masks
-D        10.1.70.0/24 [90/1024000] via 10.1.1.2, 02:40:02, Ethernet0/0
-D EX  192.168.2.0/23 [170/10240] via 172.17.0.1, 02:39:59, Tunnel20
-                     [170/10240] via 172.16.0.1, 02:39:59, Tunnel10
-D EX  192.168.10.0/23 [170/10240] via 172.17.0.1, 02:39:59, Tunnel20
-                      [170/10240] via 172.16.0.1, 02:39:59, Tunnel10
+D        10.1.70.0/24 [90/1024000] via 10.1.1.2, 02:03:40, Ethernet0/0
+D EX  192.168.2.0/23 [170/25605120] via 172.17.0.1, 01:48:39, Tunnel20
+                     [170/25605120] via 172.16.0.1, 01:48:39, Tunnel10
+D EX  192.168.10.0/23 [170/25605120] via 172.17.0.1, 00:56:17, Tunnel20
+                      [170/25605120] via 172.16.0.1, 00:56:17, Tunnel10

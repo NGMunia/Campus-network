@@ -2,6 +2,7 @@ from Network.Devices import Spokes, Area_0, Area_10, Area_23, Firewall_A_10, Fir
 from itertools import chain
 from netmiko import ConnectHandler
 from rich import print as rp
+from csv import writer
 
 
 #Configure DHCP helper address
@@ -12,12 +13,12 @@ for devices in Spokes.values():
     rp(c.send_config_set(commands))
     c.save_config()
     c.disconnect()
-    print('\n)')
+    print('\n')
 
 
-# #Configuring SNMP on all devices
+#Configuring SNMP on all devices
 for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
-                     Area_10.values(),Area_23.values()):
+                     Area_10.values(),Area_23.values(), Spokes.values()):
     c = ConnectHandler(**devices)
     c.enable()
     commands = ['ip access-list standard SNMP-ACL',
@@ -54,7 +55,7 @@ for devices in chain(Spokes.values(), Area_23.values()):
 
 # #Configuring Access-class restricting remote connection to 192.168.2.0/24
 for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),Area_10.values(),
-                     Area_23.values()):
+                     Area_23.values(), Spokes.values()):
     c = ConnectHandler(**devices)
     c.enable()
 
@@ -83,6 +84,7 @@ for devices in chain(Spokes.values(),Firewall_A_10.values(),Area_0.values(),Area
         f.write(output)
         c.disconnect()
     rp(f'The running-configuration of ',host,' has been successfully backed up!!')
+
 
 
 #Configuring Crytography on DMVPN network:
@@ -215,6 +217,29 @@ for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.val
 
 
 
+#Inventory
+filepath = input('Inventory filepath: ')
+with open (f'{filepath}/Data.csv', 'w')as f:
+    write_data = writer(f)
+    write_data.writerow(['Hostname','IP address','Software Image','Version','Serial number','Hardware'])
+    for devices in chain(Firewall_A_10.values(), Firewalls_A_51.values(), Area_0.values(),
+                         Area_10.values(),Area_23.values(),Spokes.values()):
+        c = ConnectHandler(**devices)
+        c.enable()
+        output = c.send_command('show version',use_textfsm=True)[0]
 
+        hostname = output['hostname']
+        ip_addr  = devices['ip']
+        image    = output['software_image']
+        version  = output['version']
+        serial   = output['serial']
+        hardware = output['hardware']
 
+        write_data.writerow([hostname,ip_addr,image,version,serial,hardware])
+        rp(f'Finished taking {hostname} Inventory')
+        c.disconnect()
+
+        
+    
+   
 
